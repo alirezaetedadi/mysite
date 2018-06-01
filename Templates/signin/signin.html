@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<html>
+<head1>
+    <title>ALIREZA</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-rtl.min_.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet"  type="text/css" href="{% static 'home-page.css' %}"/>
+</head1>
+<body>
+    <div class="header">
+        <h1 class="h1"><span style="color:whitesmoke;text-shadow: none;font-size: 20px">صفحه شخصی </span>اعتدادی</h1>
+        <div class="tab1"></div><div class="tab2" id="tab2"></div><div class="tab3" id="tab3" onclick="search()"><div class="tab3_ch" id="tab3_ch"></div></div><div class="tab4" id="tab4">
+        <div style="overflow: hidden;width: inherit;height: inherit;margin-top: 5px">
+        <form action="" method="get" class="search_form">
+        <input type="submit" value="A" class="search_sub"/>
+        <input type="search" class="search"/>
+            </form></div>
+        </div>
+        <div class="tab5" id="tab5"></div>
+    </div>
+    <div id="body">
+    <div id="signin">
+        {% if username_e %}
+        <p>نام کاربری تکراری است</p>
+        {% endif %}
+        <form action="" method="post">{% csrf_token %}
+            <p style="border-radius: 10px">{{form.user.as_p}}</p>
+            <input type="submit" value="sign-in"/>
+        </form>
+    </div>
+    </div>
+    </body>
+    <script type="text/javascript" src="{% static 'home-page.js' %}"></script>
+</html>

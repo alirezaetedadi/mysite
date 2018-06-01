@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<html>
+<head1>
+    <title>ALIREZA</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-rtl.min_.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet"  type="text/css" href="{% static 'home-page.css' %}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'fontawesome-free-5.0.13\web-fonts-with-css\css\fontawesome-all.css' %}"/>
+</head1>
+<body>
+    <div class="header">
+        <h1 class="h1"><span style="color:whitesmoke;text-shadow: none;font-size: 20px">صفحه شخصی </span>اعتدادی</h1>
+        <div class="tab1"></div><div class="tab2" id="tab2"></div><div class="tab3" id="tab3" onclick="search()"><div class="tab3_ch" id="tab3_ch"></div></div><div class="tab4" id="tab4">
+        <div style="overflow: hidden;width: inherit;height: inherit;margin-top: 5px">
+        <form action="" method="get" class="search_form">
+            <div class="fas fa-search" id="saerch"><input type="submit" value="" class="search_sub"/></div>
+        <input type="search" class="search"/>
+            </form></div>
+        </div>
+        <div class="tab5" id="tab5"></div>
+    </div>
+    <div class="body">
+    <div class="b_b_img"><img class="b_img" src="{% static 'pic/357860.jpg' %}"></div>
+    </div>
+    <div id="ability">
+        <div class="ability_ch">
+    <img src="{% static 'pic/HTML_Logo.png' %}" class="ab_img">
+    <p class="ab_p"><img src="{% static 'pic/green-tick-png-green-tick-icon-image-14141-1000.png' %}" class="ab_p_img"> HTML5</p>
+    </div>
+        <div class="ability_ch">
+    <img src="{% static 'pic/CSS3.png' %}" class="ab_img">
+    <p class="ab_p"><img src="{% static 'pic/green-tick-png-green-tick-icon-image-14141-1000.png' %}" class="ab_p_img"> CSS3</p>
+    </div>
+        <div class="ability_ch">
+    <img src="{% static 'pic/Javascript-shield.png' %}" class="ab_img">
+    <p class="ab_p"><img src="{% static 'pic/green-tick-png-green-tick-icon-image-14141-1000.png' %}" class="ab_p_img"> JAVASCRIPT</p>
+    </div>
+        <div class="ability_ch">
+    <img src="{% static 'pic/python_sh-600x600.png' %}" class="ab_img">
+    <p class="ab_p"><img src="{% static 'pic/Loading_icon_with_fade.png' %}" class="ab_p_imgl"> PYTHON</p>
+    </div>
+        <div class="ability_ch">
+    <img src="{% static 'pic/django_badge.sh-600x600.png' %}" class="ab_img">
+    <p class="ab_p"><img src="{% static 'pic/Loading_icon_with_fade.png' %}" class="ab_p_imgl"> DJANGO</p>
+    </div>
+    </div>
+</body>
+    <script type="text/javascript" src="{% static 'home-page.js' %}"></script>
+</html>
