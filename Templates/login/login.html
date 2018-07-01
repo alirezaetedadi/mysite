@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
 <head1>
-    <title>ALIREZA</title>
+    <title>login</title>
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-rtl.min_.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
@@ -21,12 +21,15 @@
     </div>
     <div id="body">
     <div id="signin">
-        {% if username_e %}
-        <p>نام کاربری تکراری است</p>
+        {% if error %}
+        <p>اطلاعات ناقص است</p>
+        {% endif %}
+        {% if ein %}
+        <p>اطلاعات اشتباه است</p>
         {% endif %}
         <form action="" method="post">{% csrf_token %}
             <p style="border-radius: 10px">{{form}}</p>
-            <input type="submit" value="sign-in"/>
+            <input type="submit" value="login"/>
         </form>
     </div>
     </div>

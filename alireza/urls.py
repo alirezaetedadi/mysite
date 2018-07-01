@@ -18,11 +18,11 @@ from django.urls import path
 from homepage.views import home_page
 from signin.views import signin
 from django.conf import settings
-from login.views import test
+from login.views import login
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_page),
     path('signin/', signin),
-    path('test/',test)
+    path('login/', login)
 
 ]

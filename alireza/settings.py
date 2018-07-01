@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'templates_app',
+    'login',
     'signin',
     'homepage',
     'django.contrib.admin',
