@@ -25,12 +25,13 @@ SECRET_KEY = 'ak1q8fp@@a-x&f1dz&o0e@f+&vr&dha(%ehaj97ts^^$&jrnf2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.103']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'testing',
     'templates_app',
     'login',
     'signin',
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'signin',
         'USER': 'etedadi',
-        'PASSWORD': '1111',
+        'PASSWORD': '2312',
         'HOST': 'localhost',
         'PORT': '5433'
     }

@@ -1,5 +1,6 @@
 from django.db import models
 
-class visit(models.Model):
+class views(models.Model):
     user_ip = models.CharField(max_length=20)
-    count = models.IntegerField(default=1)
+    count = models.IntegerField(default=0)\
+

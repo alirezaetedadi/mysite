@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from homepage.views import home_page
 from signin.views import signin
-from django.conf import settings
+from homepage.tests import test
 from login.views import login
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_page),
     path('signin/', signin),
-    path('login/', login)
+    path('login/', login),
+    path('test/', test)
 
 ]

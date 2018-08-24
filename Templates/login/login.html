@@ -28,7 +28,7 @@
         <p>اطلاعات اشتباه است</p>
         {% endif %}
         <form action="" method="post">{% csrf_token %}
-            <p style="border-radius: 10px">{{form}}</p>
+            {{form}}
             <input type="submit" value="login"/>
         </form>
     </div>
