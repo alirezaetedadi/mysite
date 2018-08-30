@@ -25,12 +25,13 @@ SECRET_KEY = 'ak1q8fp@@a-x&f1dz&o0e@f+&vr&dha(%ehaj97ts^^$&jrnf2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.103']
+ALLOWED_HOSTS = ['192.168.1.103','192.168.137.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'testing',
     'templates_app',
     'login',
@@ -107,6 +108,16 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 
 
 # Internationalization
